@@ -1,15 +1,4 @@
-# Test URLs
 product_urls = [
-    "https://www.grailed.com/listings/11153730-Supreme-Pilot-Marker",
-    "https://www.grailed.com/listings/9995415-American-Vintage---Lee---Vintage-Rare-vintage-lee-big-logo-spellout-crewneck",
-    "https://www.grailed.com/listings/9995371-Nike---Streetwear-Rare-Nike-Football-just-do-it-tee",
-    "https://www.grailed.com/listings/9991296-NFL---Oakland-Raiders-Rare-Vintage-Raider-like-oakland-raiders-jacket",
-    "https://www.grailed.com/listings/9964125-Designer---Japanese-Brand-Yearn-Lans-Scape-Crewneck-by-japanese",
-    "https://www.grailed.com/listings/9963047-Band-Tees---Vintage-Rare-The-Beatles-Rock-Band-A-Hard-Day-Night-Tee--31",
-    "https://www.grailed.com/listings/9960875-Cartoon-Network---Japanese-Brand---Need-Gone-Today---Hello-Kitty-x-Gachapin-x-Mukku-Crewneck",
-    "https://www.grailed.com/listings/9952271-Uniqlo-Uniqlo-T-Shirt-White-del-amo-lifewear-Tokyo-New-York-la",
-    "https://www.grailed.com/listings/9949245-Japanese-Brand-Rare-zuppa-di-zucca-patchwork-design",
-    "https://www.grailed.com/listings/9946193-Uniqlo-Unqilo-longsleeve-shirt-light-sweater",
     "https://www.grailed.com/listings/9929222-Chaps-Ralph-Lauren-Ralph-lauren-chaps-polo-purple-striped",
     "https://www.grailed.com/listings/9924312-Band-Tees---Vintage-2002-Stompin-Tom-Tee",
     "https://www.grailed.com/listings/9916269-Handcrafted-Creative-earring",
@@ -24,6 +13,7 @@ product_urls = [
     "https://www.grailed.com/listings/9876005-Polo-Ralph-Lauren-Polo-Ralph-Lauren-Long-Sleeve-T-Shirt",
     "https://www.grailed.com/listings/9875696-United-Arrows-United-Arrow-Monkey-Time-T-Shirt",
     "https://www.grailed.com/listings/9525564-No-Brand-KeepItGlassy-Rasta-Beanie",
+    """
     "https://www.grailed.com/listings/9520563-Target-Basics---Vineyard-Vines-Vineyard-Vines-x-Target-Waterproof-Deck-of-Cards",
     "https://www.grailed.com/listings/9510375-Hanes-Made-In-Usa-Vintage-90s-Hanes-pat-green-country-music-tour-band-t-shirt",
     "https://www.grailed.com/listings/9494616-Japanese-Brand---Tracey-Vest-LEXUS-TECTICAL-MULTIPOCKET-VEST-JACKET",
@@ -34,4 +24,5 @@ product_urls = [
     "https://www.grailed.com/listings/9444564-American-Vintage---Vintage---Vintage-55-Trayvon-martin-tee",
     "https://www.grailed.com/listings/9452340-Nautica-Vintage-Nautica-Classic-Flag-Polo",
     "https://www.grailed.com/listings/9452680-Tommy-Hilfiger---Tommy-Jeans---Vintage--FINAL-DROP--Shoot-For-the-Stars-Tommy-Jeans-Button-Up"
+    """
 ]
