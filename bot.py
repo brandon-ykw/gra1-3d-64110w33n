@@ -16,8 +16,6 @@ def order(product_url):
     # Wait for elements to appear (in anticipation of high Grailed traffic)
     driver.implicitly_wait(300)
 
-    cookies_grailed = pickle.load(open('cookies_grailed.pkl', 'rb'))
-
     # NOTE: this takes time, perhaps optimise by having subsequent lines run at specific Grailed drop time.
     insert_all_cookies(driver)
     
