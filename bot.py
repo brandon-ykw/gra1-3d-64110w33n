@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from joblib import Parallel, delayed
-# NOTE: change to config when deploying
 from config import product_urls
 from datetime import datetime
 import time
@@ -12,11 +11,16 @@ import pickle
 def access_sites(product_urls):
     # For concurrent bots
     Parallel(n_jobs=-1)(delayed(initialize_bot)(product_url) for product_url in product_urls)
+    print('END OF SCRIPT')
 
 def initialize_bot(product_url): 
-    # NOTE: Halloween drop_time 
     print('item url', product_url)
-    drop_time = datetime(2019, 10, 30, 20, 22, 1)
+
+    # NOTE: THIS TIME IS THE DROP TIME IN EST. PUT THE DROP TIME IN YOUR OWN TIME ZONE.
+    #       IN OTHER WORDS, ADJUST THE DROP TIME BY THE TIME DIFFERENCE BETWEEN EST AND 
+    #       YOUR OWN TIME ZONE. 
+    #       FORMAT: YEAR, MONTH, DAY, HOUR, MINUTE, SECOND
+    drop_time = datetime(2019, 10, 31, 13, 31, 1)
 
     chrome_options = ChromeOptions()
     setChromeOptions(chrome_options)
@@ -27,12 +31,11 @@ def initialize_bot(product_url):
     # Wait for elements to appear (in anticipation of high Grailed traffic)
     driver.implicitly_wait(300)
 
-    # NOTE: this takes time, perhaps optimise by having subsequent lines run at specific Grailed drop time.
     insert_all_cookies(driver)
 
     # Sleep until drop time
     seconds_delta = (drop_time - datetime.now()).total_seconds()
-    # time.sleep(seconds_delta)
+    time.sleep(seconds_delta)
 
     # Begin order execution
     order(product_url, driver, drop_time)
@@ -70,11 +73,11 @@ def order(product_url, driver, drop_time):
     driver.find_element_by_css_selector('button[title="Checkout With PayPal"]').click()
     
     # NOTE: WARNING WARNING WARNING WARNING - YOU WILL PAY:
-    # pay_button = WebDriverWait(driver, 20).until(
-    #     EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[1]/button')))
-    # pay_button.click()
+    pay_button = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[1]/button')))
+    pay_button.click()
 
-    time.sleep(20)
+    print('Check Grailed/Email to see if you secured it')
 
 def insert_all_cookies(driver):
     insert_cookies('grailed', driver)
