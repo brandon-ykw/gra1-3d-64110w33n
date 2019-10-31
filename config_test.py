@@ -1,28 +1,8 @@
 product_urls = [
-    "https://www.grailed.com/listings/9929222-Chaps-Ralph-Lauren-Ralph-lauren-chaps-polo-purple-striped",
-    "https://www.grailed.com/listings/9924312-Band-Tees---Vintage-2002-Stompin-Tom-Tee",
-    "https://www.grailed.com/listings/9916269-Handcrafted-Creative-earring",
-    "https://www.grailed.com/listings/9915257-Calvin-Klein-Cozy-Grey-Pyjama-Pants",
-    "https://www.grailed.com/listings/9915158-Good-Enough-Good-Enough-T-Shirt",
-    "https://www.grailed.com/listings/9894617-Uniqlo-Like-New-Sport-Slacks-in-White",
-    "https://www.grailed.com/listings/9890780-Phenomenon-Phenomenon-Japan-Praying-Mantis-Print-T-Shirt",
-    "https://www.grailed.com/listings/9885369-Japanese-Brand---Vintage-Rare-Vintage-Yonex-jersey",
-    "https://www.grailed.com/listings/9881114-Custom-Custom-plaid-studded-shorts-kountry-kapital-inspired",
-    "https://www.grailed.com/listings/9877817-Vintage-2010-Russell-Peters-tee",
-    "https://www.grailed.com/listings/9876027-Nano-Universe-Nano-universe-Long-Sleeve-T-shirt",
-    "https://www.grailed.com/listings/9876005-Polo-Ralph-Lauren-Polo-Ralph-Lauren-Long-Sleeve-T-Shirt",
-    "https://www.grailed.com/listings/9875696-United-Arrows-United-Arrow-Monkey-Time-T-Shirt",
-    "https://www.grailed.com/listings/9525564-No-Brand-KeepItGlassy-Rasta-Beanie",
-    """
     "https://www.grailed.com/listings/9520563-Target-Basics---Vineyard-Vines-Vineyard-Vines-x-Target-Waterproof-Deck-of-Cards",
     "https://www.grailed.com/listings/9510375-Hanes-Made-In-Usa-Vintage-90s-Hanes-pat-green-country-music-tour-band-t-shirt",
     "https://www.grailed.com/listings/9494616-Japanese-Brand---Tracey-Vest-LEXUS-TECTICAL-MULTIPOCKET-VEST-JACKET",
     "https://www.grailed.com/listings/9493058-Vintage-Vintage-notre-dame-tshirt-single-stitch",
     "https://www.grailed.com/listings/9492288-Harley-Davidson-1995-harley-davidson-washington-state-apple-tanktop",
-    "https://www.grailed.com/listings/9487815-Band-Tees-Queen-2008-tshirt",
-    "https://www.grailed.com/listings/9452706-Polo-Ralph-Lauren-Rare-Polo-Ralph-Lauren-Orange-T-Shirt",
-    "https://www.grailed.com/listings/9444564-American-Vintage---Vintage---Vintage-55-Trayvon-martin-tee",
-    "https://www.grailed.com/listings/9452340-Nautica-Vintage-Nautica-Classic-Flag-Polo",
-    "https://www.grailed.com/listings/9452680-Tommy-Hilfiger---Tommy-Jeans---Vintage--FINAL-DROP--Shoot-For-the-Stars-Tommy-Jeans-Button-Up"
-    """
+    "https://www.grailed.com/listings/9487815-Band-Tees-Queen-2008-tshirt"
 ]

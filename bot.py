@@ -4,10 +4,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from joblib import Parallel, delayed
 # NOTE: change to config when deploying
-from config_test import product_urls
+from config import product_urls
 from datetime import datetime
 import time
-import schedule
 import pickle
 
 def access_sites(product_urls):
@@ -16,7 +15,8 @@ def access_sites(product_urls):
 
 def initialize_bot(product_url): 
     # NOTE: Halloween drop_time 
-    drop_time = datetime(2019, 10, 30, 18, 55, 1)
+    print('item url', product_url)
+    drop_time = datetime(2019, 10, 30, 20, 22, 1)
 
     chrome_options = ChromeOptions()
     setChromeOptions(chrome_options)
@@ -32,7 +32,7 @@ def initialize_bot(product_url):
 
     # Sleep until drop time
     seconds_delta = (drop_time - datetime.now()).total_seconds()
-    time.sleep(seconds_delta)
+    # time.sleep(seconds_delta)
 
     # Begin order execution
     order(product_url, driver, drop_time)
@@ -53,21 +53,28 @@ def order(product_url, driver, drop_time):
     # Access listing
     driver.get(product_url) 
 
+    # In case item hasn't dropped and link is not updated
+    if driver.current_url != product_url:
+        print('did not drop yet')
+        for i in range(480):
+            time.sleep(0.5)
+            driver.get(product_url)
+            print('i', i)
+            if driver.current_url == product_url:
+                break
+
     # PURCHASE
     driver.find_element_by_css_selector('button[title="PURCHASE"]').click()
     
     # CHECKOUT WITH PayPal
     driver.find_element_by_css_selector('button[title="Checkout With PayPal"]').click()
-
+    
     # NOTE: WARNING WARNING WARNING WARNING - YOU WILL PAY:
     # pay_button = WebDriverWait(driver, 20).until(
     #     EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[1]/button')))
     # pay_button.click()
 
-    print('order time', (datetime.now() - drop_time).total_seconds())
-    print('-------------------------------------')
-
-    time.sleep(20) # testing
+    time.sleep(20)
 
 def insert_all_cookies(driver):
     insert_cookies('grailed', driver)
